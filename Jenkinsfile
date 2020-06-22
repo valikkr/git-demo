@@ -11,6 +11,7 @@ node() {
     sh "echo Testing on ${NODE_NAME}"
     sh "cat i.py"
     sh "python i.py"
+    sh "python fig.py"
     }
     stage("Delivery"){
     sh "echo Pulling on registry......"
