@@ -6,13 +6,8 @@ node() {
     
     stage("Build") {
     sh "echo Building ${BUILD_ID} build"
-    uses: actions/setup-python@v3.8
-    with:
-     python-version: '3.8'
-     architecture: 'x64'
-     - name: Install requirements
-   # Устанавливаем зависимости
-     run: pip install -r requirements.txt
+    sh 'python3 --version'
+    sh 'pip3 install -U pytest'
     }
     stage("Testing"){
     sh "echo Testing on ${NODE_NAME}"
