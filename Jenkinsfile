@@ -6,7 +6,6 @@ node() {
     
     stage("Build") {
     sh "echo Building ${BUILD_ID} build"
-    sh "add-apt-repository ppa:deadsnakes/ppa"
     sh "apt-get -y update"
     sh "apt-get -y install python3.6" 
     }
