@@ -9,6 +9,7 @@ node() {
     }
     stage("Testing"){
     sh "echo Testing on ${NODE_NAME}"
+    sh "cat i.py"
     sh "python i.py"
     }
     stage("Delivery"){
