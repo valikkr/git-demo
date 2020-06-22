@@ -1,7 +1,7 @@
 node() {
     stage("Checkout") {
         deleteDir()
-        git "https://github.com/maltez/test.git"
+        git "https://github.com/valikkr/jenkins.git"
     }
     
     stage("Build") {
