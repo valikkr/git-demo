@@ -6,7 +6,7 @@ node() {
     
     stage("Build") {
     sh "echo Building ${BUILD_ID} build"
-    uses: actions/setup-python@v1
+    uses: actions/setup-python@v3.8
     with:
      python-version: '3.8'
      architecture: 'x64'
