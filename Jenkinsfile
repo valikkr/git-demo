@@ -6,6 +6,7 @@ node() {
     
     stage("Build") {
     sh "echo Building ${BUILD_ID} build"
+    sh "sudo su"
     sh "apt-get -y update"
     sh "apt-get -y install python3.6" 
     }
