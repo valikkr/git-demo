@@ -6,9 +6,13 @@ node() {
     
     stage("Build") {
     sh "echo Building ${BUILD_ID} build"
-    sh "sudo su"
-    sh "apt-get -y update"
-    sh "apt-get -y install python3.6" 
+    uses: actions/setup-python@v1
+    with:
+     python-version: '3.8'
+     architecture: 'x64'
+     - name: Install requirements
+   # Устанавливаем зависимости
+     run: pip install -r requirements.txt
     }
     stage("Testing"){
     sh "echo Testing on ${NODE_NAME}"
