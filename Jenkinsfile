@@ -6,7 +6,6 @@ node() {
     
     stage("Build") {
     sh "echo Building ${BUILD_ID} build"
-    sh 'python3 --version'
     sh 'pip3 install -U pytest'
     }
     stage("Testing"){
